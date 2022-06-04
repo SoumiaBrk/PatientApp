@@ -21,7 +21,9 @@ public class profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 
+
         nom=(TextView) findViewById(R.id.nom);
+        SeDeconnecter=(TextView) findViewById(R.id.tollbar_text_SeDeconnecter);
         prenom=(TextView) findViewById(R.id.prenom);
         email=(TextView) findViewById(R.id.email);
         dateNaissance=(TextView) findViewById(R.id.dateNaissance);
@@ -37,13 +39,6 @@ public class profile extends AppCompatActivity {
         dateNaissance.setText(intent.getStringExtra("date_naissance"));
         sexe.setText(intent.getStringExtra("sexe"));
 
-    }
-
-    public void ReturnBack(View view){
-        Intent intent= new Intent(getApplicationContext(), editProfile.class);
-        finish();
-        startActivity(intent);
-
         SeDeconnecter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,6 +47,15 @@ public class profile extends AppCompatActivity {
                 finish();
             }
         });
+
+    }
+
+    public void ReturnBack(View view){
+        Intent intent= new Intent(getApplicationContext(), editProfile.class);
+        finish();
+        startActivity(intent);
+
+
 
     }
 }

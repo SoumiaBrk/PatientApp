@@ -7,9 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background6"
-    android:gravity="center"
-    android:layout_margintop="20dp"
-    >
+    android:gravity="center">
 
 
     <com.mikhaellopez.circularimageview.CircularImageView
@@ -33,7 +31,6 @@
         android:id="@+id/login_text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginbottom="20dp"
         android:gravity="center"
         android:text="connexion"
         android:textAlignment="center"

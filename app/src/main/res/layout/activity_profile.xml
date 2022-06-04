@@ -41,10 +41,9 @@
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
             android:layout_below="@+id/profil_text_codeQR"
-            android:background="@color/Mix"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:background="@color/Mix" />
 
     </RelativeLayout>
 
@@ -54,7 +53,7 @@
         android:orientation="vertical"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:layout_marginTop="30dp"
+
         android:gravity="center_vertical">
 
         <TextView
@@ -149,41 +148,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_marginTop="-20dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:background="@drawable/bg_btn"
-            android:text="Editer profil"
-            android:gravity="center"
-            android:textSize="18dp"
-            android:textColor="@color/Mix"
-            android:drawableLeft="@drawable/ic_baseline_edit_24"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="-10dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="Editer profil"
+            android:textColor="@color/Mix"
+            android:textSize="18dp" />
 
         <TextView
             android:layout_width="240dp"
             android:layout_height="50dp"
-            android:background="@drawable/bg_btn"
-            android:text="changer mot de passe"
-            android:gravity="center"
-            android:textSize="18dp"
-            android:textColor="@color/Mix"
-            android:drawableLeft="@drawable/ic_baseline_lock_24"
-            android:paddingLeft="20dp"
             android:layout_marginLeft="-10dp"
             android:layout_marginTop="16dp"
-            />
+            android:background="@drawable/bg_btn"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="changer mot de passe"
+            android:textColor="@color/Mix"
+            android:textSize="18dp" />
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

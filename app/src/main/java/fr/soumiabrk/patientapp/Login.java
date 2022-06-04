@@ -33,6 +33,9 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(Login.this, profile.class);
+                startActivity(i);
+                finish();
                 String mail,pas;
 
                 mail = email.getText().toString();
