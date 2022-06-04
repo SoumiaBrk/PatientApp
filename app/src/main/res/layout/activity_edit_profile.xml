@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".editProfile"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editer profil"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="75dp"
+            android:textSize="25sp"
+            android:background="@color/Mix" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Nom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/view_lastname"
+        android:layout_below="@id/title"/>
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/view_lastname"
+        android:hint="saisir votre nom"
+        android:inputType="text" />
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Prénom:"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:id="@+id/view_firsname"
+        android:layout_below="@id/view_lastname"/>
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nom"
+        android:layout_toRightOf="@id/view_firsname"
+        android:hint="saisir votre prénom"
+        android:inputType="text" />
+
+
+    <TextView
+        android:id="@+id/view_email"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_firsname"
+        android:layout_marginTop="18dp"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email"
+        android:layout_below="@id/prenom"
+        android:layout_toRightOf="@id/view_email"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date de naissance:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/view_dob"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/view_email"/>
+
+
+    <Spinner
+        android:id="@+id/jours"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/days"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        />
+
+    <Spinner
+        android:id="@+id/mois"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/months"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        android:layout_toRightOf="@id/jours"
+        />
+
+    <Spinner
+        android:id="@+id/annee"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/years"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/view_dob"
+        android:layout_toRightOf="@id/mois"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexe:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/view_sex"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/jours"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioSex"
+        android:orientation="horizontal"
+        android:layout_below="@id/jours"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/view_sex">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMale"
+            android:text="Homme"
+            android:layout_marginLeft="13dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioFemale"
+            android:text="Femme"
+            android:layout_marginLeft="10dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_sex"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/Mix"
+        android:text="Enregistrer"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
