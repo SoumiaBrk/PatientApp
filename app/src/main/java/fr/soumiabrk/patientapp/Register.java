@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class register extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     EditText Email,Pass,ConfirmPass;
     Button reg;
@@ -38,20 +38,20 @@ public class register extends AppCompatActivity {
                 Cpassw = ConfirmPass.getText().toString();
 
                 if(Mail.equals(""));{
-                    Toast.makeText(register.this, "Email est vide", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Email est vide", Toast.LENGTH_SHORT).show();
                 }
                 if(passw.equals(""));{
-                    Toast.makeText(register.this, "mot de passe est vide", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "mot de passe est vide", Toast.LENGTH_SHORT).show();
                 }
                 if(Cpassw.equals(""));{
-                    Toast.makeText(register.this, "mot de passe est vide", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "mot de passe est vide", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         Ibtn.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        Intent R = new Intent(register.this, Login.class);
+                                        Intent R = new Intent(Register.this, Login.class);
                                         startActivity(R);
                                         finish();
                                     }

@@ -14,7 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class editProfile extends AppCompatActivity {
+
+public class EditProfile extends AppCompatActivity {
 
     private Button enregistrer;
     private EditText nom;
@@ -27,11 +28,14 @@ public class editProfile extends AppCompatActivity {
 
     private RadioGroup sexe;
 
+    public static String MSG="text";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+
 
         enregistrer = (Button) findViewById(R.id.save);
 
@@ -44,9 +48,18 @@ public class editProfile extends AppCompatActivity {
         annee= (Spinner) findViewById(R.id.annee);
 
         sexe=(RadioGroup) findViewById(R.id.radioSex);
+
+
+
         enregistrer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String msg =nom.getText().toString();    //récupérer le nom
+                Intent i = new Intent(EditProfile.this,ListAppointments.class); //déclarer l'objet intent
+                i.putExtra(MSG,msg);                                                      //en specifiant nom de l'activity
+                startActivity(i);  //démarrer la deuxieme activity
+
                 String str_nom="";
                 String str_prenom="";
                 String str_email="";
@@ -57,6 +70,10 @@ public class editProfile extends AppCompatActivity {
                 String str_date="";
 
                 String str_sexe="";
+
+
+
+
 
                 //Validation
                 boolean info_valable=true; //s'il manque quelque chose, nos changeons cette var en false.
@@ -114,7 +131,7 @@ public class editProfile extends AppCompatActivity {
                 if (info_valable==false){
                     Toast.makeText(getApplicationContext(),"Il manque des informations",Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent intent = new Intent(getApplicationContext(), profile.class);
+                    Intent intent = new Intent(getApplicationContext(), Profile.class);
                     intent.putExtra("nom",str_nom);
                     intent.putExtra("prenom",str_prenom);      //nos envoyons des données
                     intent.putExtra("email",str_email);        // en utilisant putExtra

@@ -33,7 +33,8 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Login.this, profile.class);
+
+                Intent i = new Intent(Login.this, Profile.class);
                 startActivity(i);
                 finish();
                 String mail,pas;
@@ -56,7 +57,7 @@ public class Login extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Login.this, register.class);
+                Intent i = new Intent(Login.this, Register.class);
                 startActivity(i);
                 finish();
             }

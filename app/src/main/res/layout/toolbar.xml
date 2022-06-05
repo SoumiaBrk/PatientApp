@@ -37,7 +37,8 @@
             android:text="Se déconnecter"
             android:textColor="@color/blue"
             android:textSize="15dp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            android:drawableRight="@drawable/ic_baseline_exit_to_app_24" />
 
 
     </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profile"
+    tools:context=".Profile"
     android:orientation="vertical"
     android:background="#ffff">
 
@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
             android:layout_below="@+id/profil_text_codeQR"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@color/Mix" />
@@ -53,7 +54,7 @@
         android:orientation="vertical"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-
+         android:layout_marginTop="15dp"
         android:gravity="center_vertical">
 
         <TextView
@@ -153,10 +154,11 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/profil_text_editerprofl"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginLeft="-10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/bg_btn"
             android:drawableLeft="@drawable/ic_baseline_edit_24"
             android:gravity="center"

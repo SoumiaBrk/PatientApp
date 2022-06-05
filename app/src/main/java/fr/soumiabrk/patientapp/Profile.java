@@ -8,11 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     private  TextView SeDeconnecter;
     private TextView nom,prenom,email,dateNaissance,sexe;
 
+    private TextView editeProfile;
 
 
     @Override
@@ -28,6 +29,7 @@ public class profile extends AppCompatActivity {
         email=(TextView) findViewById(R.id.email);
         dateNaissance=(TextView) findViewById(R.id.dateNaissance);
         sexe=(TextView) findViewById(R.id.sexe);
+        editeProfile = (TextView) findViewById(R.id.profil_text_editerprofl);
 
 
         // Obtenez les données transférées de l'activité source.
@@ -42,7 +44,16 @@ public class profile extends AppCompatActivity {
         SeDeconnecter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(profile.this, Login.class);
+                Intent i = new Intent(Profile.this, Login.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        editeProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Profile.this, EditProfile.class);
                 startActivity(i);
                 finish();
             }
@@ -51,7 +62,7 @@ public class profile extends AppCompatActivity {
     }
 
     public void ReturnBack(View view){
-        Intent intent= new Intent(getApplicationContext(), editProfile.class);
+        Intent intent= new Intent(getApplicationContext(), EditProfile.class);
         finish();
         startActivity(intent);
 
