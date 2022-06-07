@@ -41,7 +41,10 @@ public class ListAppointments extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(ListAppointments.this, "Prendre un rendez-vous!", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(ListAppointments.this, Appointment.class);
+                startActivity(i);
+                finish();
+                Toast.makeText(ListAppointments.this, "Prendre un-vous!", Toast.LENGTH_SHORT).show();
                 
             }
 
