@@ -125,7 +125,7 @@ public class EditProfile extends AppCompatActivity {
                 // un bouton dans le cas où il est toujours affiché.
 
                 InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+//                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
 
                 if (info_valable==false){

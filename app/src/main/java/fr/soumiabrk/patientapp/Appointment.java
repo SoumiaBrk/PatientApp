@@ -1,15 +1,14 @@
 package fr.soumiabrk.patientapp;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Button;
 
 import  androidx.fragment.app.Fragment;
-import  androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
 
 public class Appointment  extends FragmentActivity {
 
@@ -25,7 +24,14 @@ public class Appointment  extends FragmentActivity {
 
         // Instantiate a ViewPager2 and a PagerAdapter.
         viewPager = findViewById(R.id.pager);
-        pagerAdapter = new ScreenSlidePagerAdapter(this);
+
+        final  ArrayList<Fragment> fragments=new ArrayList<>();
+        fragments.add(new CenterFragment());
+        fragments.add(new DoseFragment());
+        fragments.add(new Vaccineragment());
+        fragments.add(new Dateragment());
+        fragments.add(new ResumeFragment());
+        pagerAdapter = new ScreenSlidePagerAdapter(this, fragments);
         viewPager.setAdapter(pagerAdapter);
     }
 
@@ -38,22 +44,37 @@ public class Appointment  extends FragmentActivity {
         }
     }
 
-    private class ScreenSlidePagerAdapter extends FragmentStateAdapter implements fr.soumiabrk.patientapp.ScreenSlidePagerAdapter {
-        public ScreenSlidePagerAdapter(FragmentActivity fa) {
+    public void next(){
+        viewPager.setCurrentItem(viewPager.getCurrentItem()+1);
+    }
+
+    public void back(){
+        viewPager.setCurrentItem(viewPager.getCurrentItem()-1);
+    }
+
+
+
+    private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
+        private final ArrayList<Fragment> fragments;
+
+        public ScreenSlidePagerAdapter(FragmentActivity fa, ArrayList<Fragment> fragments) {
             super(fa);
+            this.fragments = fragments;
         }
 
         @Override
         public Fragment createFragment(int position) {
-            return new CenterFragment();
+
+            return fragments.get(position);
         }
 
 
         @Override
         public int getItemCount() {
-            return NUM_PAGES;
+            return fragments.size();
         }
     }
+
 
 
 
