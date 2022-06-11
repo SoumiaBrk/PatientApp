@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Mix">#0F33B6</color>
     <color name="blue">#0F71BF</color>
+    <color name="bleue">#0EC0D8</color>
     <color name="gray">#3658C4F6</color>
 
     <color name="colorAccent">#FFFFFF</color>
@@ -22,6 +23,13 @@
     <color name="abcd">#0F9D58</color>
     <color name="abcde">#808080</color>
     <color name="abcdef">#eeeeee</color>
+
+
+
+        <color name="colorPrimary1">#0F9D58</color>
+        <color name="colorPrimaryDark1">#16E37F</color>
+        <color name="colorAccent1">#03DAC5</color>
+
 
 
 </resources>

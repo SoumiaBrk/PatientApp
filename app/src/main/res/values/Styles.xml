@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTime" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary"> @color/blue</item>
+        <item name="colorPrimaryDark"> @color/Mix</item>
+        <item name="colorAccent"> @color/bleue</item>
+    </style>
+</resources>

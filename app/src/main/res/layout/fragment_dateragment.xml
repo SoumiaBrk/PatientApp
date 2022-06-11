@@ -6,6 +6,54 @@
     android:layout_height="match_parent"
     android:id="@+id/fitDate"
     tools:context=".Dateragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="60dp"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:gravity="center"
+
+           android:text="Marquer votre Date"
+           android:textColor="@color/blue"
+           android:textSize="23sp"
+           android:textStyle="bold"/>
+
+       <TextView
+           android:id="@+id/myDate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="date "
+           android:textSize="18dp"
+           android:gravity="center"
+           android:layout_marginTop="30dp"
+
+           />
+
+       <LinearLayout
+           android:background="@drawable/bg_calendar"
+           android:layout_marginLeft="55dp"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="40dp">
+
+           <CalendarView
+               android:id="@+id/date_calendar_DateAppointment"
+               android:layout_width="wrap_content"
+               android:layout_height="320dp">
+           </CalendarView>
+
+       </LinearLayout>
+
+
+   </LinearLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="831dp"
@@ -13,12 +61,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="date"
-            android:textSize="50dp">
-        </TextView>
+
+
         <Button
             android:id="@+id/skipButton"
             android:layout_width="wrap_content"
@@ -27,7 +71,7 @@
             android:layout_marginStart="303dp"
             android:background="#00000000"
             android:text="Skip"
-            android:textColor="@color/Mix"
+            android:textColor="@color/blue"
             android:textSize="20sp" />
     </RelativeLayout>
 
@@ -74,7 +118,7 @@
             android:layout_marginBottom="6dp"
             android:background="#00000000"
             android:text="Back"
-            android:textColor="@color/Mix"
+            android:textColor="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -89,7 +133,7 @@
             android:layout_marginBottom="6dp"
             android:background="#00000000"
             android:text="Next"
-            android:textColor="@color/Mix"
+            android:textColor="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
 

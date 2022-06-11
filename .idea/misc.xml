@@ -3,6 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/drawable-v24/bg_calendar.xml" value="0.1385" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/drawable-v24/gradientcolor.xml" value="0.1385" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/drawable-v24/ic_baseline_email_24.xml" value="0.1385" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.1385" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_appointment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_date.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/fragment_center.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/fragment_dateragment.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/fragment_dose.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/fragment_resume.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/fragment_vaccineragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/item_design.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/AndroidPatientApp/app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/PatientApp/app/src/main/res/drawable-v24/bg_btn.xml" value="0.135" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/PatientApp/app/src/main/res/drawable-v24/button_bg.xml" value="0.135" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/PatientApp/app/src/main/res/drawable-v24/edit_text_bg.xml" value="0.1" />
