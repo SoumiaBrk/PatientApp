@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Login.this, Profile.class);
+                Intent i = new Intent(Login.this, AppointmentList.class);
                 startActivity(i);
                 finish();
                 String mail,pas;

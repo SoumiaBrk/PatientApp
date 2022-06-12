@@ -13,23 +13,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="dose"
-            android:textSize="50dp">
-        </TextView>
+
 
         <Button
             android:id="@+id/skipButton"
-            android:layout_width="wrap_content"
+            android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="303dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="274dp"
+            android:layout_marginTop="0dp"
             android:background="#00000000"
-            android:text="Skip"
+            android:text="Quitter"
             android:textColor="@color/Mix"
             android:textSize="20sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:text="Choisissez une dose"
+            android:textColor="@color/blue"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="300dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Réserver la premiére dose"
+                    android:textSize="20sp"
+                    android:buttonTint="@color/Mix"
+                    android:background="#462196F3"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20sp"
+                    android:background="#462196F3"
+                    android:text="Réserver la deuxiéme dose"
+                    android:buttonTint="@color/Mix"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20sp"
+                    android:text="Réserver la troisiéme dose"
+                    android:textSize="20sp"
+                    android:buttonTint="@color/Mix"
+                    android:background="#462196F3"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
     </RelativeLayout>
 
 
@@ -74,7 +133,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginBottom="6dp"
             android:background="#00000000"
-            android:text="Back"
+            android:text="Retour"
             android:textColor="@color/Mix"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -89,7 +148,7 @@
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="6dp"
             android:background="#00000000"
-            android:text="Next"
+            android:text="suivant"
             android:textColor="@color/Mix"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ellipse2" />

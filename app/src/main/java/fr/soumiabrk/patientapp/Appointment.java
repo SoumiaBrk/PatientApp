@@ -1,7 +1,9 @@
 package fr.soumiabrk.patientapp;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import  androidx.fragment.app.Fragment;
@@ -15,6 +17,7 @@ public class Appointment  extends FragmentActivity {
 
     private static final int NUM_PAGES = 5;
     private ViewPager2 viewPager;
+
     private FragmentStateAdapter pagerAdapter;
 
     @Override
@@ -25,6 +28,7 @@ public class Appointment  extends FragmentActivity {
         // Instantiate a ViewPager2 and a PagerAdapter.
         viewPager = findViewById(R.id.pager);
 
+
         final  ArrayList<Fragment> fragments=new ArrayList<>();
         fragments.add(new CenterFragment());
         fragments.add(new DoseFragment());
@@ -33,6 +37,7 @@ public class Appointment  extends FragmentActivity {
         fragments.add(new ResumeFragment());
         pagerAdapter = new ScreenSlidePagerAdapter(this, fragments);
         viewPager.setAdapter(pagerAdapter);
+
     }
 
     @Override

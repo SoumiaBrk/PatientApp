@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,7 +27,7 @@ import java.util.List;
 
 public class CenterFragment extends Fragment{
     private Button nextButton;
-    private Button previousButton;
+    private  Button skipButton;
 
 
     RecyclerView recyclerView;
@@ -41,14 +43,17 @@ public class CenterFragment extends Fragment{
 
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_center, container, false);
         nextButton= rootView.findViewById(R.id.nextbtn);
-        previousButton= rootView.findViewById(R.id.backbtn);
-
+        skipButton = rootView.findViewById(R.id.skipButton);
 
         recyclerView = rootView.findViewById(R.id.recyclerView);
 
-
         initData();
         initRecyclerView();
+
+
+
+
+
 
         return rootView;
     }
@@ -90,9 +95,18 @@ public class CenterFragment extends Fragment{
         nextButton.setOnClickListener(v -> {
             ((Appointment)getActivity()).next();
         });
-        previousButton.setOnClickListener(v -> {
 
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent((Appointment)getActivity(), AppointmentList.class);
+                startActivity(i);
+            }
         });
-    }
+
+
+
+
+     }
 }
 

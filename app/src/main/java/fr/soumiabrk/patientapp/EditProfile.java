@@ -56,7 +56,7 @@ public class EditProfile extends AppCompatActivity {
             public void onClick(View v) {
 
                 String msg =nom.getText().toString();    //récupérer le nom
-                Intent i = new Intent(EditProfile.this,ListAppointments.class); //déclarer l'objet intent
+                Intent i = new Intent(EditProfile.this,AppointmentList.class); //déclarer l'objet intent
                 i.putExtra(MSG,msg);                                                      //en specifiant nom de l'activity
                 startActivity(i);  //démarrer la deuxieme activity
 
@@ -107,8 +107,8 @@ public class EditProfile extends AppCompatActivity {
                 str_date=String.valueOf(int_jour) + "-" + String.valueOf(int_mois) + "-" + String.valueOf(int_annee) ;
 
                 // obtenir le bouton radio sélectionné de radioGroup
-
-                int selectedId = sexe.getCheckedRadioButtonId(); // si aucun button radio n'est coché, cette fonction retourne -1
+                int selectedId = sexe.getCheckedRadioButtonId();
+               // si aucun button radio n'est coché, cette fonction retourne -1
 
                 if (selectedId != -1){
                     RadioButton radioSexButton;

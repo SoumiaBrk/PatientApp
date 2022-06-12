@@ -14,13 +14,13 @@
         android:theme="@style/Theme.PatientApp"
         tools:targetApi="31">
         <activity
+            android:name=".AppointmentList"
+            android:exported="false" />
+        <activity
             android:name=".Appointment"
             android:exported="false" />
         <activity
             android:name=".ForgotPassword"
-            android:exported="false" />
-        <activity
-            android:name=".ListAppointments"
             android:exported="false" />
         <activity
             android:name=".Date"

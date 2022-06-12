@@ -16,8 +16,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
     private List<ModelClass> centreList;
 
-    public Adapter(List<ModelClass>userList){
-        this.centreList=userList;
+    public Adapter(List<ModelClass>centreList){
+        this.centreList=centreList;
     }
 
 
@@ -38,7 +38,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
       String line=centreList.get(position).getDivider();
 
 
-      holder.setData(ressource,name,msg,address,line);
+      holder.setData1(ressource,name,msg,address,line);
 
     }
 
@@ -71,7 +71,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
         }
 
-        public void setData(int ressource, String name, String msg, String address, String line) {
+        public void setData1(int ressource, String name, String msg, String address, String line) {
 
             imageView.setImageResource(ressource);
             textView1.setText(name);
@@ -79,5 +79,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
             textView2.setText(address);
             divider.setText(line);
         }
+
     }
 }

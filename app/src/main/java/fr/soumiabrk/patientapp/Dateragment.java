@@ -22,6 +22,11 @@ import java.util.Locale;
 
 public class Dateragment extends Fragment {
 
+    private Button nextButton;
+    private Button previousButton;
+    private  Button skipButton;
+
+
     private CalendarView calendarview;
     private TextView mydate;
     private Button enregistrer;
@@ -31,6 +36,11 @@ public class Dateragment extends Fragment {
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_dateragment, container, false);
+
+        nextButton= rootView.findViewById(R.id.nextbtn);
+        previousButton= rootView.findViewById(R.id.backbtn);
+        skipButton = rootView.findViewById(R.id.skipButton);
+
 
 
 
@@ -46,6 +56,22 @@ public class Dateragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        nextButton.setOnClickListener(v -> {
+            ((Appointment)getActivity()).next();
+        });
+        previousButton.setOnClickListener(v -> {
+            ((Appointment)getActivity()).back();
+
+        });
+
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent((Appointment)getActivity(), AppointmentList.class);
+                startActivity(i);
+            }
+        });
+
 
         calendarview.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -58,6 +84,11 @@ public class Dateragment extends Fragment {
 
         });
     }
+
+
+
+
+
 
 }
 

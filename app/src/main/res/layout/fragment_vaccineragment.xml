@@ -16,21 +16,103 @@
         app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="vaccine"
-            android:textSize="50dp">
-        </TextView>
+            android:layout_height="51dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Choisissez un vaccin"
+            android:textColor="@color/blue"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/skipButton"
-            android:layout_width="wrap_content"
+            android:layout_width="129dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="303dp"
+            android:layout_marginStart="282dp"
             android:background="#00000000"
-            android:text="Skip"
+            android:text="Quitter"
             android:textColor="@color/Mix"
             android:textSize="20sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="300dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#462196F3"
+                    android:padding="12dp"
+                    android:buttonTint="@color/Mix"
+                    android:text=" AstraZeneca"
+                    android:textColor="@color/Mix"
+                    android:textSize="20sp">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:buttonTint="@color/Mix"
+                    android:layout_marginTop="20sp"
+                    android:background="#462196F3"
+                    android:padding="12dp"
+                    android:text=" Janssen"
+                    android:textColor="@color/Mix"
+                    android:textSize="20sp">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20sp"
+                    android:buttonTint="@color/Mix"
+                    android:background="#462196F3"
+                    android:padding="12dp"
+                    android:text=" Sinopharm "
+                    android:textColor="@color/Mix"
+                    android:textSize="20sp">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radio_button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20sp"
+                    android:buttonTint="@color/Mix"
+                    android:background="#462196F3"
+                    android:padding="12dp"
+                    android:text=" Sinovac"
+                    android:textColor="@color/Mix"
+                    android:textSize="20sp">
+
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
     </RelativeLayout>
 
 
@@ -75,7 +157,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginBottom="6dp"
             android:background="#00000000"
-            android:text="Back"
+            android:text="Retour"
             android:textColor="@color/Mix"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -90,7 +172,7 @@
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="6dp"
             android:background="#00000000"
-            android:text="Next"
+            android:text="suivant"
             android:textColor="@color/Mix"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
