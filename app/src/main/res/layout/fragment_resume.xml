@@ -169,7 +169,7 @@
                 android:layout_marginTop="7dp"
                 android:background="#00000000"
                 android:text="Quitter"
-                android:textColor="@color/Mix"
+                android:textColor="@color/blue"
                 android:textSize="20sp" />
 
 

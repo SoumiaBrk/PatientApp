@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class Register extends AppCompatActivity {
 
     EditText Email,Pass,ConfirmPass;
-    Button reg;
+    Button reg,cancel;
     TextView Ibtn;
 
     @Override
@@ -26,11 +26,17 @@ public class Register extends AppCompatActivity {
         ConfirmPass= findViewById(R.id.register_edittext_Confirmpassword);
         reg = findViewById(R.id.register_button_inscrire);
         Ibtn = findViewById(R.id.register_text_title);
+        cancel = findViewById(R.id.register_button_cancel);
 
 
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent i = new Intent(Register.this, AppointmentList.class);
+                startActivity(i);
+                finish();
+
                 String Mail,passw,Cpassw;
 
                 Mail = Email.getText().toString();
@@ -45,6 +51,9 @@ public class Register extends AppCompatActivity {
                 }
                 if(Cpassw.equals(""));{
                     Toast.makeText(Register.this, "mot de passe est vide", Toast.LENGTH_SHORT).show();
+                }
+                if(Mail.equals("") & passw.equals("") &Cpassw.equals(""));{
+                    Toast.makeText(Register.this, "les informations est vide", Toast.LENGTH_SHORT).show();
                 }
             }
         });

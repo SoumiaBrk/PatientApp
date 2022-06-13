@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -28,6 +29,8 @@ public class EditProfile extends AppCompatActivity {
 
     private RadioGroup sexe;
 
+    private ImageView arrow;
+
     public static String MSG="text";
 
     @Override
@@ -36,7 +39,7 @@ public class EditProfile extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
 
-
+        arrow = (ImageView) findViewById(R.id.editprofil_image_arrow);
         enregistrer = (Button) findViewById(R.id.save);
 
         nom= (EditText) findViewById(R.id.nom);
@@ -49,7 +52,14 @@ public class EditProfile extends AppCompatActivity {
 
         sexe=(RadioGroup) findViewById(R.id.radioSex);
 
-
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EditProfile.this,Profile.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         enregistrer.setOnClickListener(new View.OnClickListener() {
             @Override

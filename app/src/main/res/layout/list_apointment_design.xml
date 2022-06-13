@@ -75,7 +75,7 @@
                     android:layout_marginTop="17dp"
                     android:maxLines="1"
                     android:text="Temps"
-                    android:textColor="@color/Mix"
+                    android:textColor="@color/blue"
                     android:textSize="12sp" />
 
                 <TextView
@@ -133,7 +133,7 @@
                     android:layout_marginLeft="7dp"
                     android:layout_marginTop="6dp"
                     android:text="Type de Rendez_vous"
-                    android:textColor="@color/Mix"
+                    android:textColor="@color/blue"
                     android:textSize="12sp" />
 
                 <TextView
@@ -147,7 +147,7 @@
                     android:layout_marginLeft="164dp"
                     android:layout_marginTop="-57dp"
                     android:text="Sinovac"
-                    android:textColor="@color/Mix"
+                    android:textColor="@color/blue"
                     android:textSize="14sp" />
 
 

@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Profile extends AppCompatActivity {
 
     private  TextView SeDeconnecter;
     private TextView nom,prenom,email,dateNaissance,sexe;
-
+    private ImageView arrow;
     private TextView editeProfile;
 
 
@@ -22,7 +23,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 
-
+        arrow = (ImageView) findViewById(R.id.profil_image_arrow);
         nom=(TextView) findViewById(R.id.nom);
         SeDeconnecter=(TextView) findViewById(R.id.tollbar_text_SeDeconnecter);
         prenom=(TextView) findViewById(R.id.prenom);
@@ -45,6 +46,14 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Profile.this, Login.class);
+                startActivity(i);
+                finish();
+            }
+        });
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Profile.this, AppointmentList.class);
                 startActivity(i);
                 finish();
             }

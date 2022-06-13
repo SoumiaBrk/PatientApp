@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class AppointmentList extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     List<AppointmentListModel> appointmentList;
     AdapterListAppointment adapter;
-
+    private TextView NameListappointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class AppointmentList extends AppCompatActivity {
         listappointement_image_profil=findViewById(R.id.listappointement_image_profil);
         floatingActionButton = findViewById(R.id.floatingbutton);
 
+        NameListappointment = findViewById(R.id.listAppointment_NameUser);
 
         listappointement_image_profil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +49,7 @@ public class AppointmentList extends AppCompatActivity {
                 Intent i = new Intent(AppointmentList.this, Appointment.class);
                 startActivity(i);
                 finish();
-                Toast.makeText(AppointmentList.this, "Prendre un-vous!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AppointmentList.this, "Prendre un rendez-vous!", Toast.LENGTH_SHORT).show();
 
             }
 

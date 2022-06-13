@@ -1,5 +1,7 @@
 package fr.soumiabrk.patientapp;
 
+import android.widget.TextView;
+
 public class AppointmentListModel {
     private  String appointement_month,
             appointement_day,
@@ -10,6 +12,7 @@ public class AppointmentListModel {
             vaccin,
             doctor_name2,
             voir_fiche_btn2;
+
 
     AppointmentListModel(String appointement_month,
                          String appointement_day,

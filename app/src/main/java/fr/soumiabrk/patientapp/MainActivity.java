@@ -15,19 +15,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        hello = findViewById(R.id.main_text_helloword);
 
+       Thread thread = new Thread(){
 
-        hello.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Login.class);
-                startActivity(i);
-                finish();
-            }
-        });
+           public void run (){
+               try {
+                   sleep(2000);
+                   Intent intent = new Intent(getApplicationContext(), Login.class);
+                   startActivity(intent);
+                   finish();
+
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+           }
+       };
+
+       thread.start();
+
     }
-
-
-
 }
