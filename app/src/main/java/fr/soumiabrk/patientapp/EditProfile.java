@@ -84,7 +84,6 @@ public class EditProfile extends AppCompatActivity {
 
 
 
-
                 //Validation
                 boolean info_valable=true; //s'il manque quelque chose, nos changeons cette var en false.
 
