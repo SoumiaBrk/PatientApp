@@ -6,23 +6,16 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import android.os.Bundle;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CenterFragment extends Fragment{
@@ -31,7 +24,6 @@ public class CenterFragment extends Fragment{
 
 
     RecyclerView recyclerView;
-    LinearLayoutManager layoutManager;
     List<ModelClass> centreList;
     Adapter adapter;
 
@@ -50,19 +42,14 @@ public class CenterFragment extends Fragment{
         initData();
         initRecyclerView();
 
-
-
-
-
-
         return rootView;
     }
 
     private void initRecyclerView() {
 
         //recyclerView = findViewById(R.id.recyclerView);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        ((LinearLayoutManager) layoutManager).setOrientation(RecyclerView.VERTICAL);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new Adapter(centreList);
         recyclerView.setAdapter(adapter);

@@ -27,7 +27,6 @@ public class Login extends AppCompatActivity {
         pass = findViewById(R.id.login_edittext_password);
         login = findViewById(R.id.login_button_seConnectez);
         register = findViewById(R.id.login_button_inscrire);
-        btn = findViewById(R.id.login_text_title);
         image = findViewById(R.id.login_image_loginApp);
 
         login.setOnClickListener(new View.OnClickListener() {
