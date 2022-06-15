@@ -34,7 +34,7 @@ public class AppointmentList extends AppCompatActivity {
         NameListappointment = findViewById(R.id.listAppointment_NameUser);
 
         String s = getIntent().getStringExtra(EditProfile.MSG);
-        TextView tv = findViewById(R.id.prenom);
+        TextView tv = findViewById(R.id.listAppointment_NameUser);
         tv.setText(s);
 
         listappointement_image_profil.setOnClickListener(new View.OnClickListener() {
