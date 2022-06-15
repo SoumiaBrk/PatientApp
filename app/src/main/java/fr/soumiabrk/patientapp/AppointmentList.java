@@ -31,7 +31,6 @@ public class AppointmentList extends AppCompatActivity {
         setContentView(R.layout.activity_appointment_list);
         listappointement_image_profil=findViewById(R.id.listappointement_image_profil);
         floatingActionButton = findViewById(R.id.floatingbutton);
-
         NameListappointment = findViewById(R.id.listAppointment_NameUser);
 
         listappointement_image_profil.setOnClickListener(new View.OnClickListener() {
