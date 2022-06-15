@@ -57,6 +57,16 @@
             android:src="@drawable/ic_baseline_person_pin_24" />
 
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liste des rendez vous"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"/>
+
    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -65,8 +75,7 @@
            android:id="@+id/recyclerViewAppointment"
            android:layout_width="match_parent"
            android:layout_height="358dp"
-           android:layout_marginBottom="70dp"
-           >
+           android:layout_marginBottom="70dp">
 
 
        </androidx.recyclerview.widget.RecyclerView>

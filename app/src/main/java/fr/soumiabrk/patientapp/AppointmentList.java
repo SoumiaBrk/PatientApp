@@ -33,6 +33,10 @@ public class AppointmentList extends AppCompatActivity {
         floatingActionButton = findViewById(R.id.floatingbutton);
         NameListappointment = findViewById(R.id.listAppointment_NameUser);
 
+        String s = getIntent().getStringExtra(EditProfile.MSG);
+        TextView tv = findViewById(R.id.prenom);
+        tv.setText(s);
+
         listappointement_image_profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

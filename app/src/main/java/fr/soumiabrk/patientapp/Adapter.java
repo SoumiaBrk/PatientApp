@@ -15,7 +15,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
 
     private List<ModelClass> centreList;
-
     public Adapter(List<ModelClass>centreList){
         this.centreList=centreList;
     }

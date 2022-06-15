@@ -65,7 +65,7 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String msg =nom.getText().toString();    //récupérer le nom
+                String msg =prenom.getText().toString();    //récupérer le nom
                 Intent i = new Intent(EditProfile.this,AppointmentList.class); //déclarer l'objet intent
                 i.putExtra(MSG,msg);                                                      //en specifiant nom de l'activity
                 startActivity(i);  //démarrer la deuxieme activity
