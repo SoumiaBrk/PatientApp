@@ -41,9 +41,22 @@ public class Dateragment extends Fragment {
 
     public TextView previewSelectedTimeTextView;
     private final TimePickerDialog.OnTimeSetListener timePickerDialogListener = (TimePickerDialog.OnTimeSetListener)(new TimePickerDialog.OnTimeSetListener() {
-        public void onTimeSet(@org.jetbrains.annotations.Nullable TimePicker view, int hourOfDay, int minute) {
-            String formattedTime = hourOfDay == 0 ? (minute < 10 ? hourOfDay + 12 + ":0" + minute + " am" : "" + (hourOfDay + 12) + ':' + minute + " am") : (hourOfDay > 12 ? (minute < 10 ? hourOfDay - 12 + ":0" + minute + " pm" : "" + (hourOfDay - 12) + ':' + minute + " pm") : (hourOfDay == 12 ? (minute < 10 ? hourOfDay + ":0" + minute + " pm" : "" + hourOfDay + ':' + minute + " pm") : (minute < 10 ? "" + hourOfDay + ':' + minute + " am" : "" + hourOfDay + ':' + minute + " am")));
-            Dateragment.this.getPreviewSelectedTimeTextView().setText((CharSequence)formattedTime);
+
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            String formattedTime = hourOfDay == 0 ?
+                    (minute < 10 ?
+                      hourOfDay + 12 + ":0" + minute + " am"
+                            : "" + (hourOfDay + 12) + ':' + minute + " am")
+                    : (hourOfDay > 12 ?
+                    (minute < 10 ?
+                            hourOfDay - 12 + ":0" + minute + " pm"
+                            : "" + (hourOfDay - 12) + ':' + minute + " pm") :
+                    (hourOfDay == 12 ?
+                            (minute < 10 ? hourOfDay + ":0" + minute + " pm"
+                                    : "" + hourOfDay + ':' + minute + " pm")
+                            : (minute < 10 ? "" + hourOfDay + ':' + minute + " am"
+                            : "" + hourOfDay + ':' + minute + " am")));
         }
     });
 
@@ -73,8 +86,7 @@ public class Dateragment extends Fragment {
 
 
         buttonhour = rootView.findViewById(R.id.pick_time_button);
-
-         texthour = rootView.findViewById(R.id.preview_picked_time_textView);
+        texthour = rootView.findViewById(R.id.preview_picked_time_textView);
 
 
 
@@ -114,11 +126,10 @@ public class Dateragment extends Fragment {
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String date = (month+1)+"/"+(dayOfMonth)+"/"+year;
                 mydate.setText(date);
-
-
             }
-
         });
+
+
     }
 
 
