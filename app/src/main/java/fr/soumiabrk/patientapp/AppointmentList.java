@@ -42,7 +42,7 @@ public class AppointmentList extends AppCompatActivity {
         TextView tv = findViewById(R.id.listAppointment_NameUser);
         tv.setText(s);
 
-        image_vaccin.setOnClickListener(new View.OnClickListener() {
+        image_vaccin.setOnClickListener(new View.OnClickListener() {;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AppointmentList.this, VaccinList.class);
