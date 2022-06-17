@@ -65,6 +65,7 @@
                 android:layout_marginBottom="310dp"
                 android:background="#462196F3"
                 android:orientation="horizontal"
+                android:id="@+id/linearLayout_date"
                 android:padding="10dp">
 
                 <TextView
@@ -152,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="162dp"
+                android:layout_marginEnd="125dp"
                 android:layout_marginBottom="236dp"
                 android:backgroundTint="@color/blue"
                 android:text="CONFIRMer"

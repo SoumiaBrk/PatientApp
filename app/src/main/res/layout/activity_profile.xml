@@ -41,10 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
             android:layout_below="@+id/profil_text_codeQR"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:background="@color/Mix" />
+            android:background="@color/blue" />
 
     </RelativeLayout>
 
@@ -168,6 +168,7 @@
             android:textSize="18dp" />
 
         <TextView
+            android:id="@+id/profil_chanagepassword"
             android:layout_width="240dp"
             android:layout_height="50dp"
             android:layout_marginLeft="-10dp"

@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
 
+
     <RelativeLayout
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -22,8 +23,8 @@
         <TextView
             android:id="@+id/Bienvenue"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
             android:layout_marginRight="30dp"
             android:gravity="center"
             android:text="Bienvenue "
@@ -56,6 +57,15 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_baseline_person_pin_24" />
 
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ListAppointment_image_listvaccin"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="325dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/vaccin" />
+
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
@@ -67,32 +77,29 @@
         android:gravity="center_horizontal"
         android:layout_marginBottom="10dp"/>
 
-   <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="378dp">
 
-       <androidx.recyclerview.widget.RecyclerView
-           android:id="@+id/recyclerViewAppointment"
-           android:layout_width="match_parent"
-           android:layout_height="358dp"
-           android:layout_marginBottom="70dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-
-       </androidx.recyclerview.widget.RecyclerView>
-
-       <com.google.android.material.floatingactionbutton.FloatingActionButton
-           android:id="@+id/floatingbutton"
-           android:layout_width="wrap_content"
-           android:layout_height="136dp"
-           android:layout_alignParentEnd="true"
-           android:layout_alignParentBottom="true"
-           android:backgroundTint="@color/blue"
-           android:src="@drawable/ic_baseline_add_24"
-
-           />
-
-   </RelativeLayout>
+        </androidx.recyclerview.widget.RecyclerView>
 
 
+    </RelativeLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="136dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/ic_baseline_add_24" />
 
 </LinearLayout>

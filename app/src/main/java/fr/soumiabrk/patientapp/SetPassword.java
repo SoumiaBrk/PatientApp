@@ -9,40 +9,43 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ForgotPassword extends AppCompatActivity {
+public class SetPassword extends AppCompatActivity {
 
-    TextView retour;
-    AppCompatButton pageModifierPass;
     ImageView arrow;
+    AppCompatButton changerpass;
+    TextView annuler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_set_password);
 
-        retour = findViewById(R.id.forgotpass_retour);
-        pageModifierPass = findViewById(R.id.forgotpass_réinitiakiserMotPasse);
-        arrow = findViewById(R.id.forgotpass_arrow);
+        arrow = findViewById(R.id.setpasssword_arrow);
+        annuler = findViewById(R.id.setpassword_button_annuler);
+        changerpass = findViewById(R.id.setpasssword_changerMotpasse);
+
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ForgotPassword.this,Profile.class);
+                Intent intent = new Intent(SetPassword.this,ForgotPassword.class);
                 startActivity(intent);
                 finish();
             }
         });
-        pageModifierPass.setOnClickListener(new View.OnClickListener() {
+
+        annuler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ForgotPassword.this,SetPassword.class);
+                Intent intent = new Intent(SetPassword.this,ForgotPassword.class);
                 startActivity(intent);
                 finish();
             }
         });
-        retour.setOnClickListener(new View.OnClickListener() {
+        changerpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ForgotPassword.this,Profile.class);
+                Intent intent = new Intent(SetPassword.this,Profile.class);
                 startActivity(intent);
                 finish();
             }

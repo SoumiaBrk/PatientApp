@@ -1,5 +1,6 @@
 package fr.soumiabrk.patientapp;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -16,8 +17,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
+import android.widget.TimePicker;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+
+import kotlin.jvm.internal.Intrinsics;
 
 
 public class Dateragment extends Fragment {
@@ -30,6 +36,34 @@ public class Dateragment extends Fragment {
     private CalendarView calendarview;
     private TextView mydate;
     private Button enregistrer;
+    private  Button buttonhour;
+    private TextView texthour;
+
+    public TextView previewSelectedTimeTextView;
+    private final TimePickerDialog.OnTimeSetListener timePickerDialogListener = (TimePickerDialog.OnTimeSetListener)(new TimePickerDialog.OnTimeSetListener() {
+        public void onTimeSet(@org.jetbrains.annotations.Nullable TimePicker view, int hourOfDay, int minute) {
+            String formattedTime = hourOfDay == 0 ? (minute < 10 ? hourOfDay + 12 + ":0" + minute + " am" : "" + (hourOfDay + 12) + ':' + minute + " am") : (hourOfDay > 12 ? (minute < 10 ? hourOfDay - 12 + ":0" + minute + " pm" : "" + (hourOfDay - 12) + ':' + minute + " pm") : (hourOfDay == 12 ? (minute < 10 ? hourOfDay + ":0" + minute + " pm" : "" + hourOfDay + ':' + minute + " pm") : (minute < 10 ? "" + hourOfDay + ':' + minute + " am" : "" + hourOfDay + ':' + minute + " am")));
+            Dateragment.this.getPreviewSelectedTimeTextView().setText((CharSequence)formattedTime);
+        }
+    });
+
+    @NotNull
+    public final TextView getPreviewSelectedTimeTextView() {
+        TextView buttonhour = this.previewSelectedTimeTextView;
+        if (buttonhour == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("previewSelectedTimeTextView");
+        }
+
+        return buttonhour;
+    }
+
+    public final void setPreviewSelectedTimeTextView(@NotNull TextView var1) {
+        Intrinsics.checkNotNullParameter(var1, "<set-?>");
+        this.previewSelectedTimeTextView = var1;
+    }
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,21 +71,23 @@ public class Dateragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_dateragment, container, false);
 
+
+        buttonhour = rootView.findViewById(R.id.pick_time_button);
+
+         texthour = rootView.findViewById(R.id.preview_picked_time_textView);
+
+
+
         nextButton= rootView.findViewById(R.id.nextbtn);
         previousButton= rootView.findViewById(R.id.backbtn);
         skipButton = rootView.findViewById(R.id.skipButton);
-
-
-
-
         calendarview = rootView.findViewById(R.id.date_calendar_DateAppointment);
         mydate = rootView.findViewById(R.id.myDate);
 
+
         return rootView;
 
-
     }
-
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -84,9 +120,6 @@ public class Dateragment extends Fragment {
 
         });
     }
-
-
-
 
 
 

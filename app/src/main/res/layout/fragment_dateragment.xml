@@ -19,21 +19,31 @@
            android:layout_marginTop="30dp"
            android:gravity="center"
 
-           android:text="Marquer votre Date"
+           android:text="Marquer votre Date et heure"
            android:textColor="@color/blue"
-           android:textSize="23sp"
+           android:textSize="22sp"
            android:textStyle="bold"/>
+
 
        <TextView
            android:id="@+id/myDate"
-           android:layout_width="match_parent"
+           android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="date "
-           android:textSize="18dp"
-           android:gravity="center"
            android:layout_marginTop="30dp"
+           android:layout_gravity="center"
+           android:text="Aperçu de la date choisie ici "
+           android:textSize="18dp" />
 
-           />
+           <TextView
+           android:id="@+id/preview_picked_time_textView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="9dp"
+           android:layout_gravity="center"
+           android:text="Aperçu de l'heure choisie ici"
+           android:textSize="18dp"/>
+
+
 
        <LinearLayout
            android:background="@drawable/bg_calendar"
@@ -49,6 +59,19 @@
            </CalendarView>
 
        </LinearLayout>
+       <Button
+           android:id="@+id/pick_time_button"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="0dp"
+           android:layout_gravity="center"
+           android:backgroundTint="@color/blue"
+           android:text="heure"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
    </LinearLayout>

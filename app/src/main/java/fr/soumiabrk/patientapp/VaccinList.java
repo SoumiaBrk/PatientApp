@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +18,23 @@ public class VaccinList extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     List<VaccinListModel> vaccinList;
     AdapterListVaccin adapter;
+    View arrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccin_list);
 
+        arrow = findViewById(R.id.editprofil_image_arrow);
 
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(VaccinList.this, AppointmentList.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         initData();
         initRecyclerView();
@@ -30,7 +42,7 @@ public class VaccinList extends AppCompatActivity {
 
     private void initRecyclerView() {
 
-        recyclerView = findViewById(R.id.vaccinlis_recyclerView);
+        recyclerView = findViewById(R.id.vaccinlist_recyclerView);
         layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);

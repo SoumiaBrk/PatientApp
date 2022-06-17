@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import java.util.List;
 public class AppointmentList extends AppCompatActivity {
 
     FloatingActionButton floatingActionButton;
+    CircularImageView image_vaccin;
     ImageView listappointement_image_profil;
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
@@ -32,10 +34,22 @@ public class AppointmentList extends AppCompatActivity {
         listappointement_image_profil=findViewById(R.id.listappointement_image_profil);
         floatingActionButton = findViewById(R.id.floatingbutton);
         NameListappointment = findViewById(R.id.listAppointment_NameUser);
+        image_vaccin = findViewById(R.id.ListAppointment_image_listvaccin);
+
+
 
         String s = getIntent().getStringExtra(EditProfile.MSG);
         TextView tv = findViewById(R.id.listAppointment_NameUser);
         tv.setText(s);
+
+        image_vaccin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AppointmentList.this, VaccinList.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         listappointement_image_profil.setOnClickListener(new View.OnClickListener() {
             @Override

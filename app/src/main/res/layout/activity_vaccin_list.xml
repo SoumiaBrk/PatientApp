@@ -11,6 +11,8 @@
         android:id="@+id/editprofil_image_arrow"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_alignParentLeft="true"
         android:src="@drawable/ic_baseline_arrow_back_24" />
     <TextView
@@ -25,13 +27,10 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/vaccinlis_recyclerView"
+        android:id="@+id/vaccinlist_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:background="@color/white"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="70dp">
+        android:background="@color/white">
     </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

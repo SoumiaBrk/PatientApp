@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class Profile extends AppCompatActivity {
 
     private  TextView SeDeconnecter;
-    private TextView nom,prenom,email,dateNaissance,sexe;
+    private TextView nom,prenom,email,dateNaissance,sexe, changePass;
     private ImageView arrow;
     private TextView editeProfile;
 
@@ -22,7 +22,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
+        changePass = findViewById(R.id.profil_chanagepassword);
         arrow = (ImageView) findViewById(R.id.profil_image_arrow);
         nom=(TextView) findViewById(R.id.nom);
         SeDeconnecter=(TextView) findViewById(R.id.tollbar_text_SeDeconnecter);
@@ -41,6 +41,15 @@ public class Profile extends AppCompatActivity {
         email.setText(intent.getStringExtra("email"));
         dateNaissance.setText(intent.getStringExtra("date_naissance"));
         sexe.setText(intent.getStringExtra("sexe"));
+
+        changePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Profile.this, ForgotPassword.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         SeDeconnecter.setOnClickListener(new View.OnClickListener() {
             @Override

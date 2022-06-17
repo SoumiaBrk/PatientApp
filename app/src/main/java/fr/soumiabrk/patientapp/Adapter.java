@@ -30,14 +30,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-      int ressource = centreList.get(position).getImageview1();
-      String name = centreList.get(position).getTextview1();
-      String msg = centreList.get(position).getTextview3();
-      String address = centreList.get(position).getTextview2();
-      String line=centreList.get(position).getDivider();
+        int ressource = centreList.get(position).getImageview1();
+        String name = centreList.get(position).getTextview1();
+        String msg = centreList.get(position).getTextview3();
+        String address = centreList.get(position).getTextview2();
+        String line=centreList.get(position).getDivider();
 
 
-      holder.setData1(ressource,name,msg,address,line);
+        holder.setData1(ressource,name,msg,address,line);
 
     }
 
