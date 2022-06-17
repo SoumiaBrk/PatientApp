@@ -107,7 +107,7 @@ public class Dateragment extends Fragment {
                     };
                     TimePickerDialog timePickerDialog = new TimePickerDialog(
                             applicationContext,
-                            /*style,*/ onTimeSetListener,
+                            onTimeSetListener,
                             hour,
                             minute,
                             true);
