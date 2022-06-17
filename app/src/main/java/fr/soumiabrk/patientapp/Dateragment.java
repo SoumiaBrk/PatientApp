@@ -9,8 +9,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +21,8 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import org.jetbrains.annotations.NotNull;
-
+import java.util.Calendar;
 import java.util.Locale;
-
-import kotlin.jvm.internal.Intrinsics;
 
 
 public class Dateragment extends Fragment {
@@ -37,8 +36,8 @@ public class Dateragment extends Fragment {
     private TextView mydate;
     private Button enregistrer;
     private  Button buttonhour;
-    int  hour , minute ;
-    private Context applicationContext;
+    private TextView textHour;
+   private int mHour,mMin;
 
 
     @Override
@@ -50,7 +49,7 @@ public class Dateragment extends Fragment {
 
         buttonhour = rootView.findViewById(R.id.pick_time_button);
 
-
+        textHour = rootView.findViewById(R.id.txtView_hour);
 
 
         nextButton= rootView.findViewById(R.id.nextbtn);
@@ -58,6 +57,8 @@ public class Dateragment extends Fragment {
         skipButton = rootView.findViewById(R.id.skipButton);
         calendarview = rootView.findViewById(R.id.date_calendar_DateAppointment);
         mydate = rootView.findViewById(R.id.myDate);
+
+
 
 
         return rootView;
@@ -73,6 +74,28 @@ public class Dateragment extends Fragment {
             ((Appointment)getActivity()).back();
 
         });
+
+
+            buttonhour.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Calendar c = Calendar.getInstance();
+                    mHour = c.get(Calendar.HOUR_OF_DAY);
+                    mMin = c.get(Calendar.MINUTE);
+
+
+
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(),new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                            textHour.setText(String.format(Locale.getDefault(), "%02d:%02d",hourOfDay, minute));
+                        }
+                    },mHour,mMin, false);
+                    timePickerDialog.show();
+                }
+
+            });
 
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,31 +115,7 @@ public class Dateragment extends Fragment {
         });
 
 
-            buttonhour.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-
-                    TimePickerDialog.OnTimeSetListener onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
-                        @Override
-                        public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                            hour = selectedHour;
-                            minute = selectedMinute;
-                            buttonhour.setText(String.format(Locale.getDefault(), "%02d:%02d", hour, minute));
-                        }
-                    };
-                    TimePickerDialog timePickerDialog = new TimePickerDialog(
-                            applicationContext,
-                            onTimeSetListener,
-                            hour,
-                            minute,
-                            true);
-
-                    timePickerDialog.setTitle("Sélectionnez l'heure");
-                    timePickerDialog.show();
-
-                }
-            });
                 }
 
 
