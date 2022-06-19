@@ -11,6 +11,8 @@
     <color name="blue">#0F71BF</color>
     <color name="bleue">#0EC0D8</color>
     <color name="gray">#3658C4F6</color>
+    <color name="nothing">#00000000</color>
+
 
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorPrimary">#26418f</color>
