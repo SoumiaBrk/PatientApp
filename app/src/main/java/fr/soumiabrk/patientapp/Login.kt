@@ -52,7 +52,8 @@ class Login : AppCompatActivity() {
 
         if (checkLoggedIn()) {
             apiKey = sharedPreferences.getString("api_key", null)
-            startActivity(Intent(this@Login, AppointmentList::class.java))
+            startActivity(Intent(this@Login, AppointmentListActivity::class.java))
+            finish()
         }
     }
 
@@ -80,7 +81,7 @@ class Login : AppCompatActivity() {
                         }
                         setLoggedIn(user.token)
                         apiKey = user.token
-                        startActivity(Intent(this@Login, AppointmentList::class.java))
+                        startActivity(Intent(this@Login, AppointmentListActivity::class.java))
                         finish()
                     }
                 }

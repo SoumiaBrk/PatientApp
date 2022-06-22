@@ -62,7 +62,7 @@ public class Profile extends AppCompatActivity {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Profile.this, AppointmentList.class);
+                Intent i = new Intent(Profile.this, AppointmentListActivity.class);
                 startActivity(i);
                 finish();
             }

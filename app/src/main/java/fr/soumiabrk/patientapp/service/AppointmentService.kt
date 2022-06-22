@@ -17,6 +17,7 @@ interface AppointmentService {
 
 
     @POST("vaccination-appointment/")
-    fun createAppointment(@Body() appointment: Map<String, Any>): Call<Appointment>
+    @JvmSuppressWildcards
+    fun createAppointment(@Body() appointment: Map<String, Any?>): Call<Appointment>
 
 }

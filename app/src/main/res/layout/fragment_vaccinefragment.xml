@@ -1,57 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fitVaccine"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fitDate"
-    tools:context=".Dateragment">
-
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="70dp"
-       android:orientation="vertical">
-
-
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:gravity="center"
-
-           android:text="Marquer votre Date et heure"
-           android:textColor="@color/blue"
-           android:textSize="22sp"
-           android:textStyle="bold" />
-
-
-       <TextView
-           android:id="@+id/myDate"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_marginTop="35dp"
-           android:text="Aperçu de la date choisie ici "
-           android:textSize="18dp" />
-
-       <LinearLayout
-           android:background="@drawable/bg_calendar"
-           android:layout_marginLeft="55dp"
-           android:layout_width="300dp"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="10dp">
-
-           <CalendarView
-               android:id="@+id/date_calendar_DateAppointment"
-               android:layout_width="wrap_content"
-               android:layout_height="320dp">
-           </CalendarView>
-
-       </LinearLayout>
-
-
-   </LinearLayout>
-
+    tools:context=".VaccineFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,51 +15,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Choisissez un vaccin"
+            android:textColor="@color/blue"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/skipButton"
-            android:layout_width="wrap_content"
+            android:layout_width="129dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginStart="282dp"
-            android:layout_marginTop="0dp"
             android:background="#00000000"
             android:text="Quitter"
             android:textColor="@color/blue"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/txtView_hour"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="495dp"
-            android:gravity="center"
-            android:text="Aperçu de l'heure choisie ici "
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/pick_time_button"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_alignParentStart="true"
+            android:layout_height="300dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="70dp"
-            android:layout_marginBottom="255dp"
-            android:backgroundTint="@color/blue"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:text="Sélectionnez l'heure"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="300dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-
+            <RadioGroup
+                android:id="@+id/vaccinesGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </RelativeLayout>
 
 
@@ -171,6 +122,5 @@
             app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
 
     </RelativeLayout>
-
 
 </FrameLayout>

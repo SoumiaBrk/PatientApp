@@ -4,8 +4,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fitVaccine"
-    tools:context=".Vaccineragment">
+    android:id="@+id/fitDate"
+    tools:context=".DateFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="70dp"
+       android:orientation="vertical">
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+
+           android:text="Marquer votre Date et heure"
+           android:textColor="@color/blue"
+           android:textSize="22sp"
+           android:textStyle="bold" />
+
+
+       <TextView
+           android:id="@+id/myDate"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="35dp"
+           android:text="Aperçu de la date choisie ici "
+           android:textSize="18dp" />
+
+       <LinearLayout
+           android:background="@drawable/bg_calendar"
+           android:layout_marginLeft="55dp"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp">
+
+           <CalendarView
+               android:id="@+id/date_calendar_DateAppointment"
+               android:layout_width="wrap_content"
+               android:layout_height="320dp">
+           </CalendarView>
+
+       </LinearLayout>
+
+
+   </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,105 +61,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:text="Choisissez un vaccin"
-            android:textColor="@color/blue"
-            android:textSize="23sp"
-            android:textStyle="bold" />
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </RelativeLayout>
 
         <Button
             android:id="@+id/skipButton"
-            android:layout_width="129dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="282dp"
+            android:layout_marginTop="0dp"
             android:background="#00000000"
             android:text="Quitter"
             android:textColor="@color/blue"
             android:textSize="20sp" />
-        <LinearLayout
+
+        <TextView
+            android:id="@+id/txtView_hour"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="495dp"
+            android:gravity="center"
+            android:text="Aperçu de l'heure choisie ici "
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/pick_time_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="300dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="255dp"
+            android:backgroundTint="@color/blue"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Sélectionnez l'heure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/radio_button1"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="#462196F3"
-                    android:padding="12dp"
-                    android:buttonTint="@color/blue"
-                    android:text=" AstraZeneca"
-                    android:textColor="@color/black"
-                    android:textSize="20sp">
-
-                </RadioButton>
-
-                <RadioButton
-                    android:id="@+id/radio_button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:buttonTint="@color/blue"
-                    android:layout_marginTop="20sp"
-                    android:background="#462196F3"
-                    android:padding="12dp"
-                    android:text=" Janssen"
-                    android:textColor="@color/black"
-                    android:textSize="20sp">
-
-                </RadioButton>
-
-                <RadioButton
-                    android:id="@+id/radio_button3"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="20sp"
-                    android:buttonTint="@color/blue"
-                    android:background="#462196F3"
-                    android:padding="12dp"
-                    android:text=" Sinopharm "
-                    android:textColor="@color/black"
-                    android:textSize="20sp">
-                </RadioButton>
-
-                <RadioButton
-                    android:id="@+id/radio_button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="20sp"
-                    android:buttonTint="@color/blue"
-                    android:background="#462196F3"
-                    android:padding="12dp"
-                    android:text=" Sinovac"
-                    android:textColor="@color/black"
-                    android:textSize="20sp">
-
-                </RadioButton>
-            </RadioGroup>
-        </LinearLayout>
     </RelativeLayout>
 
 
@@ -179,5 +171,6 @@
             app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
 
     </RelativeLayout>
+
 
 </FrameLayout>
