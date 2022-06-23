@@ -4,143 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
+    android:background="#ffff"
     android:orientation="vertical"
-    android:background="#ffff">
+    tools:context=".Profile">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp" >
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/profileQrCode"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="161dp"
             android:src="@drawable/ic_baseline_qr_code_24" />
 
-        <TextView
-            android:id="@+id/profil_text_codeQR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="110dp"
-            android:layout_marginEnd="176dp"
-            android:text="code QR"
-            android:textColor="@color/blue"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_below="@+id/profil_text_codeQR"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/blue" />
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-         android:layout_marginTop="15dp"
-        android:gravity="center_vertical">
+        android:paddingRight="15dp">
 
         <TextView
             android:id="@+id/profil_text_Nom"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Nom:"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nom"
             android:layout_toRightOf="@id/profil_text_Nom"
             android:textSize="20sp"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Prenom:"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/prenom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/prenom"
             android:textSize="20sp"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email:"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/email"
             android:textSize="20sp"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date de naissance:"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/dateNaissance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/dateNaissance"
             android:textSize="20sp"
-            android:textStyle="italic"
-            />
+            android:textStyle="italic" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sexe:"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/sexe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sexe"
             android:textSize="20sp"
             android:textStyle="italic" />
     </LinearLayout>

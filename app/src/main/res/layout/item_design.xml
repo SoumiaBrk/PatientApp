@@ -1,40 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="95dp"
         android:background="@color/white">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/imageview"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="60dp">
 
-            <ImageView
-                android:id="@+id/imageview1"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/covid1">
-
-            </ImageView>
-
-        </androidx.cardview.widget.CardView>
+        <RadioButton
+            android:id="@+id/selectedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="26dp" />
 
         <TextView
-            android:id="@+id/textview"
+            android:id="@+id/centerName"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/imageview"
+            android:layout_toRightOf="@+id/selectedButton"
             android:text="centre 1"
             android:textColor="@color/black"
             android:textSize="23sp" />
@@ -45,7 +38,7 @@
             android:layout_height="30dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="30dp"
-            android:layout_toRightOf="@+id/textview"
+            android:layout_toRightOf="@+id/centerName"
             android:background="@color/blue"
             android:paddingLeft="20dp"
             android:text="Adresse"
@@ -53,13 +46,13 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textview3"
+            android:id="@+id/centerAddress"
             android:layout_width="210dp"
             android:layout_height="30dp"
-            android:layout_below="@+id/textview"
+            android:layout_below="@+id/centerName"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="0dp"
-            android:layout_toRightOf="@+id/imageview"
+            android:layout_toRightOf="@+id/selectedButton"
             android:text="centre de vaccination"
             android:textSize="16sp" />
 
@@ -67,12 +60,12 @@
             android:id="@+id/textview4"
             android:layout_width="210dp"
             android:layout_height="20dp"
-            android:layout_below="@+id/textview"
+            android:layout_below="@+id/centerName"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:textColor="#CDC7C7"
-            android:layout_toRightOf="@+id/imageview"
+            android:layout_toRightOf="@+id/selectedButton"
             android:text="----------------------------------"
+            android:textColor="#CDC7C7"
             android:textSize="16sp" />
 
 
