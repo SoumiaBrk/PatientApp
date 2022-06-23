@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_toRightOf="@+id/username_icon"
-                android:hint="Adresse Email"
+                android:hint="Nom utilisateur"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:paddingLeft="17dp"
