@@ -70,7 +70,7 @@
                 android:layout_toRightOf="@+id/password_icon"
                 android:ems="10"
                 android:hint="Mot de passe"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 android:maxLines="1"
                 android:paddingLeft="17dp"
                 android:paddingBottom="15dp"

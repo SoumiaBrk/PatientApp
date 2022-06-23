@@ -30,7 +30,7 @@ public class VaccinList extends AppCompatActivity {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(VaccinList.this, AppointmentList.class);
+                Intent i = new Intent(VaccinList.this, AppointmentListActivity.class);
                 startActivity(i);
                 finish();
             }

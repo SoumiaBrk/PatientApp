@@ -24,10 +24,10 @@
             android:name=".VaccinList"
             android:exported="false" />
         <activity
-            android:name=".AppointmentList"
+            android:name=".AppointmentListActivity"
             android:exported="false" />
         <activity
-            android:name=".Appointment"
+            android:name=".AppointmentActivity"
             android:exported="false" />
         <activity
             android:name=".ForgotPassword"

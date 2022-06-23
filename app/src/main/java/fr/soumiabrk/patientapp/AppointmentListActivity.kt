@@ -16,7 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AppointmentList : AppCompatActivity() {
+class AppointmentListActivity : AppCompatActivity() {
     lateinit var floatingActionButton: FloatingActionButton
     lateinit var listappointement_image_profil: ImageView
     lateinit var recyclerView: RecyclerView
@@ -39,71 +39,27 @@ class AppointmentList : AppCompatActivity() {
         tv.text = s
 
         listappointement_image_profil.setOnClickListener(View.OnClickListener {
-            val i = Intent(this@AppointmentList, Profile::class.java)
+            val i = Intent(this@AppointmentListActivity, Profile::class.java)
             startActivity(i)
             finish()
         })
         floatingActionButton.setOnClickListener(View.OnClickListener {
-            val i = Intent(this@AppointmentList, Appointment::class.java)
+            val i = Intent(this@AppointmentListActivity, AppointmentActivity::class.java)
             startActivity(i)
-            finish()
-            Toast.makeText(this@AppointmentList, "Prendre un rendez-vous!", Toast.LENGTH_SHORT)
+            Toast.makeText(
+                this@AppointmentListActivity,
+                "Prendre un rendez-vous!",
+                Toast.LENGTH_SHORT
+            )
                 .show()
         })
-        initData()
-        initRecyclerView()
+
+
     }
 
-    private fun initData() {
-        appointmentList = ArrayList()
-        appointmentList.add(
-            AppointmentListModel(
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi"
-            )
-        )
-        appointmentList.add(
-            AppointmentListModel(
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi"
-            )
-        )
-        appointmentList.add(
-            AppointmentListModel(
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi"
-            )
-        )
-        appointmentList.add(
-            AppointmentListModel(
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi",
-                "hi"
-            )
-        )
+    override fun onResume() {
+        super.onResume()
+        initRecyclerView()
     }
 
     private fun initRecyclerView() {
