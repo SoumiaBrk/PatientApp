@@ -1,14 +1,16 @@
 package fr.soumiabrk.patientapp
 
-import android.util.Log
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import fr.soumiabrk.patientapp.model.Center
+
 
 class CentersListAdapter(
     private val centreList: List<Center>,
@@ -30,7 +32,14 @@ class CentersListAdapter(
             onItemCLickListener(position, center)
         }
         holder.selectedButton.isChecked = selectedPosition == position
-
+        holder.addressButton.setOnClickListener {
+            val intent =
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("geo:<${center.latitude}>,<${center.longitude}>?q=<${center.latitude}>,<${center.longitude}>(${center.name})")
+                )
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
 
@@ -42,7 +51,7 @@ class CentersListAdapter(
         val selectedButton: RadioButton
         val centerName: TextView
         val centerAddress: TextView
-        private val addressButton: TextView
+        val addressButton: Button
         private val divider: TextView
 
 
@@ -50,7 +59,7 @@ class CentersListAdapter(
             selectedButton = itemView.findViewById(R.id.selectedButton)
             centerName = itemView.findViewById(R.id.centerName)
             centerAddress = itemView.findViewById(R.id.centerAddress)
-            addressButton = itemView.findViewById(R.id.textview2)
+            addressButton = itemView.findViewById(R.id.mapsButton)
             divider = itemView.findViewById(R.id.textview4)
         }
     }
