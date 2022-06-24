@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/rectangle_round"
         android:elevation="6dp"
@@ -19,15 +19,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/login_image_loginApp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/dz" />
+
         <TextView
             android:id="@+id/register_text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
             android:gravity="center"
-            android:layout_marginTop="7dp"
-            android:text="Se connecter"
+            android:text="Connexion"
             android:textColor="@color/white"
-            android:textSize="40dp" />
+            android:textSize="33dp" />
 
 
     </RelativeLayout>
@@ -49,6 +58,12 @@
             android:layout_marginTop="36.7dp"
             android:layout_marginRight="62dp"
             android:background="@drawable/blue_border_rounded">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
 
             <EditText
                 android:id="@+id/login_edittext_email"
@@ -79,7 +94,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/password_icon"
                 android:ems="10"
                 android:hint="Mot de passe"
                 android:inputType="textPassword"

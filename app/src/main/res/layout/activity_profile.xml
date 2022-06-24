@@ -23,7 +23,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="161dp"
+
             android:src="@drawable/ic_baseline_qr_code_24" />
 
 
