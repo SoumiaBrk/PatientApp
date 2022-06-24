@@ -7,19 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_round"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/register_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:text="Se connecter"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical">
 
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="273dp"
-            android:background="@drawable/blue_bg">
-
-
-        </FrameLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -34,7 +55,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:layout_toRightOf="@+id/username_icon"
                 android:hint="Nom utilisateur"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
@@ -43,14 +63,6 @@
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:textSize="18sp" />
 
-            <ImageView
-                android:id="@+id/username_icon"
-                android:layout_width="32dp"
-                android:layout_height="20dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="17dp"
-                android:contentDescription="TODO"
-                android:src="@drawable/ic_baseline_email_24" />
 
         </RelativeLayout>
 
@@ -76,14 +88,6 @@
                 android:paddingBottom="15dp"
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/password_icon"
-                android:layout_width="32dp"
-                android:layout_height="20dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="17dp"
-                android:src="@drawable/ic_baseline_lock_24" />
 
 
         </RelativeLayout>
@@ -118,7 +122,6 @@
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

@@ -32,14 +32,14 @@
 
         <TextView
             android:id="@+id/listAppointment_NameUser"
-            android:layout_width="68dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="244dp"
-            android:layout_marginEnd="99dp"
-            android:layout_marginRight="-312dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="-384dp"
             android:layout_marginBottom="116dp"
             android:layout_toLeftOf="@+id/Bienvenue"
             android:text="Name"
