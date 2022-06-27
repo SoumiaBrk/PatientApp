@@ -18,10 +18,9 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:gravity="center"
-
            android:text="Marquer votre Date et heure"
            android:textColor="@color/blue"
-           android:textSize="22sp"
+           android:textSize="28sp"
            android:textStyle="bold" />
 
 

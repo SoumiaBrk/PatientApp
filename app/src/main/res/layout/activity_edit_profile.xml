@@ -35,7 +35,7 @@
             android:gravity="center"
             android:text="Editer profil"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
     </LinearLayout>
 
@@ -103,45 +103,42 @@
         android:inputType="textEmailAddress" />
 
     <TextView
+        android:id="@+id/view_dob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/view_email"
+        android:layout_marginTop="15dp"
         android:text="Date de naissance:"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:id="@+id/view_dob"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/view_email"/>
+        android:textStyle="bold" />
 
 
     <Spinner
         android:id="@+id/jours"
-        android:layout_width="100dp"
+        android:layout_width="93dp"
         android:layout_height="wrap_content"
-        android:entries="@array/days"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/view_dob"
-        />
+        android:layout_marginTop="10dp"
+        android:entries="@array/days" />
 
     <Spinner
         android:id="@+id/mois"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:entries="@array/months"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/view_dob"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/jours"
-        />
+        android:entries="@array/months" />
 
     <Spinner
         android:id="@+id/annee"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:entries="@array/years"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/view_dob"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/mois"
-        />
+        android:entries="@array/years" />
 
     <TextView
         android:layout_width="wrap_content"

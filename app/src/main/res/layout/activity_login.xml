@@ -36,7 +36,7 @@
             android:gravity="center"
             android:text="Connexion"
             android:textColor="@color/white"
-            android:textSize="33dp" />
+            android:textSize="30dp" />
 
 
     </RelativeLayout>

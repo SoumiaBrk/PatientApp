@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center">
-
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="-120dp"
+        android:layout_height="210dp"
         android:background="@drawable/rectangle_round"
         android:elevation="6dp"
         android:gravity="center"
@@ -34,51 +27,136 @@
             android:gravity="center"
             android:text="S'inscrire"
             android:textColor="@color/white"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayoutChamps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="110dp"
-        android:layout_marginBottom="70dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
         android:gravity="center"
         android:orientation="vertical">
-
 
         <EditText
             android:id="@+id/register_edittext_email"
             android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="50dp"
             android:drawableLeft="@drawable/ic_baseline_person_24"
-            android:ems="10"
             android:hint="Nom utilisateur"
             android:inputType="textEmailAddress"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/register_edittext_password"
             android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
             android:hint="Mot de passe"
             android:inputType="textPassword"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/register_edittext_Confirmpassword"
             android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
             android:ems="10"
             android:hint="Confirmer le mot de passe"
             android:inputType="textPassword"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/view_dob"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/register_edittext_Confirmpassword"
+            android:layout_marginTop="20dp"
+            android:text="Date de naissance:"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Spinner
+            android:id="@+id/jours"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="100dp"
+            android:layout_below="@id/view_dob"
+            android:layout_marginTop="10dp"
+            android:entries="@array/days" />
+
+        <Spinner
+            android:id="@+id/mois"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/view_dob"
+            android:layout_marginTop="-20dp"
+            android:entries="@array/months" />
+
+        <Spinner
+            android:id="@+id/annee"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="130dp"
+            android:layout_below="@id/view_dob"
+            android:layout_marginTop="-20dp"
+            android:entries="@array/years" />
+
+        <TextView
+            android:id="@+id/view_sex"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/jours"
+            android:layout_marginTop="20dp"
+            android:text="Sexe:"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jours"
+            android:layout_marginTop="-40dp"
+            android:layout_toRightOf="@id/view_sex"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="Homme" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="Femme" />
+
+        </RadioGroup>
+
+
         <!--   <Button
             android:id="@+id/register_button_inscrire"
             android:layout_width="match_parent"
@@ -92,32 +170,28 @@
             android:textSize="20sp"
             android:textStyle="bold"/>  !-->
 
+        <Button
+            android:id="@+id/register_button_inscrire"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="90dp"
+            android:backgroundTint="@color/blue"
+            android:text="S’inscrire"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/register_button_cancel"
+            android:layout_width="166dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/view_sex"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="90dp"
+            android:backgroundTint="@color/blue"
+            android:text="Annuler"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/register_button_inscrire"
-        android:layout_width="166dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/linearLayoutChamps"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="10dp"
-        android:backgroundTint="@color/blue"
-        android:text="S’inscrire"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/register_button_cancel"
-        android:layout_width="166dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/linearLayoutChamps"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/register_button_inscrire"
-        android:backgroundTint="@color/blue"
-        android:text="Annuler"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    </RelativeLayout>
+    </LinearLayout>
