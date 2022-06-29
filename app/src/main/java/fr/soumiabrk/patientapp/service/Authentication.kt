@@ -10,6 +10,9 @@ interface Authentication {
     @POST("login/")
     fun login(@Body() body: Map<String, String>): Call<User>
 
+    @POST("register/")
+    fun register(@Body() body: Map<String, Any?>): Call<User>
+
     @GET("get-user/")
     fun getUser(): Call<User>
 
