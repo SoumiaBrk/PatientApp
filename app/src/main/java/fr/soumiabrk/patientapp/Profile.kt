@@ -1,6 +1,8 @@
 package fr.soumiabrk.patientapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -26,6 +28,9 @@ class Profile : AppCompatActivity() {
     private lateinit var profileQrCode: ImageView
     private lateinit var editeProfile: TextView
 
+    private lateinit var sharedPreferences: SharedPreferences
+
+
     private val userService: Authentication =
         RetrofitClient.client.create(Authentication::class.java)
 
@@ -44,6 +49,8 @@ class Profile : AppCompatActivity() {
         editeProfile = findViewById<View>(R.id.profil_text_editerprofl) as TextView
 
 
+        sharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE)
+
         // Obtenez les données transférées de l'activité source.
         val intent = intent
         nom.text = intent.getStringExtra("nom")
@@ -56,9 +63,9 @@ class Profile : AppCompatActivity() {
             startActivity(i)
             finish()
         })
-        SeDeconnecter!!.setOnClickListener {
-            val i = Intent(this@Profile, Login::class.java)
-            startActivity(i)
+        SeDeconnecter.setOnClickListener {
+            logout()
+            startActivity(Intent(this, Login::class.java))
             finish()
         }
         arrow!!.setOnClickListener {
@@ -73,6 +80,10 @@ class Profile : AppCompatActivity() {
         }
 
         getUser()
+    }
+
+    private fun logout() {
+        sharedPreferences.edit().clear().apply()
     }
 
     private fun getUser() {
