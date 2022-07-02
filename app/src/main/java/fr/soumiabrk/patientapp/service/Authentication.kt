@@ -11,6 +11,7 @@ interface Authentication {
     fun login(@Body() body: Map<String, String>): Call<User>
 
     @POST("register/")
+    @JvmSuppressWildcards
     fun register(@Body() body: Map<String, Any?>): Call<User>
 
     @GET("get-user/")

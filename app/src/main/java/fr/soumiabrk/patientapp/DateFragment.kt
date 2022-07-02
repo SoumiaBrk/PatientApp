@@ -40,8 +40,8 @@ class DateFragment : Fragment() {
         previousButton = rootView.findViewById(R.id.backbtn)
         skipButton = rootView.findViewById(R.id.skipButton)
         calendarview = rootView.findViewById(R.id.date_calendar_DateAppointment)
-        mydate = rootView.findViewById(R.id.myDate)
 
+        mydate = rootView.findViewById(R.id.myDate)
         val tomorrow = Calendar.getInstance()
         tomorrow.add(Calendar.DATE, 1)
         calendarview.minDate = tomorrow.timeInMillis

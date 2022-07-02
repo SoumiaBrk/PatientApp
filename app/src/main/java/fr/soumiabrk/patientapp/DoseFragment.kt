@@ -41,7 +41,7 @@ class DoseFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    super.onViewCreated(view, savedInstanceState)
         nextButton!!.setOnClickListener {
             val hostActivity = (requireActivity() as AppointmentActivity)
             if (hostActivity.dose != 0)
