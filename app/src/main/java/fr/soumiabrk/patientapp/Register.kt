@@ -22,6 +22,8 @@ class Register : AppCompatActivity() {
     lateinit var LastName: EditText
     lateinit var phone: EditText
     lateinit var address: EditText
+    lateinit var carteNationale: EditText
+    lateinit var passport: EditText
     lateinit var radioGender: RadioGroup
     private var mydate: TextView? = null
 
@@ -52,10 +54,9 @@ class Register : AppCompatActivity() {
         LastName = findViewById(R.id.LastName)
         phone = findViewById(R.id.phone)
         address = findViewById(R.id.address)
+        carteNationale = findViewById(R.id.carteNationale)
+        passport = findViewById(R.id.passport)
         mydate = findViewById(R.id.myDate)
-
-
-
 
 
         radioGender = findViewById(R.id.radioGender)
@@ -65,9 +66,6 @@ class Register : AppCompatActivity() {
                 R.id.radioFemale -> gender = "F"
             }
         }
-
-
-
 
         reg.setOnClickListener { register() }
 
@@ -105,6 +103,8 @@ class Register : AppCompatActivity() {
                 "phone_num" to phone.text.toString(),
                 "address" to address.text.toString(),
                 "gender" to gender,
+                "carte_nationale" to carteNationale.text.toString(),
+                "passport" to passport.text.toString(),
             ),
         )
 

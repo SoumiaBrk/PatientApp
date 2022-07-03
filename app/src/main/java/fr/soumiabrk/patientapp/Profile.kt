@@ -104,6 +104,11 @@ class Profile : AppCompatActivity() {
 
     private fun setUpViews(user: User) {
         profileQrCode.setImageBitmap(getQrCodeBitmap(user.id.toString()))
+        nom.text = user.lastName
+        prenom.text = user.firstName
+        email.text = user.email
+        dateNaissance.text = user.birthday
+        sexe.text = if (user.gender == "M") "HOMME" else "FEMME"
     }
 
 }

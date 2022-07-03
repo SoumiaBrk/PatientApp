@@ -46,11 +46,6 @@ public class EditProfile extends AppCompatActivity {
         prenom= (EditText) findViewById(R.id.prenom);
         email= (EditText) findViewById(R.id.email);
 
-        jour= (Spinner) findViewById(R.id.jours);
-        mois= (Spinner) findViewById(R.id.mois);
-        annee= (Spinner) findViewById(R.id.annee);
-
-        sexe=(RadioGroup) findViewById(R.id.radioSex);
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,17 +110,7 @@ public class EditProfile extends AppCompatActivity {
 
                 str_date=String.valueOf(int_jour) + "-" + String.valueOf(int_mois) + "-" + String.valueOf(int_annee) ;
 
-                // obtenir le bouton radio sélectionné de radioGroup
-                int selectedId = sexe.getCheckedRadioButtonId();
-               // si aucun button radio n'est coché, cette fonction retourne -1
 
-                if (selectedId != -1){
-                    RadioButton radioSexButton;
-                    radioSexButton = (RadioButton) findViewById(selectedId);
-                    str_sexe=radioSexButton.getText().toString();
-                }else{
-                    info_valable=false;
-                }
 
 
                 // Masquer le clavier lorsque vous appuyez sur le bouton

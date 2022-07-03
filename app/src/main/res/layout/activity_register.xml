@@ -113,6 +113,30 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
+                android:id="@+id/carteNationale"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="Numero de carte nationale"
+                android:inputType="text"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/passport"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:hint="Numero de passport"
+                android:inputType="text"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
                 android:id="@+id/register_edittext_password"
                 android:layout_width="300dp"
                 android:layout_height="40dp"
@@ -165,7 +189,7 @@
                 android:id="@+id/Gender"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
-                android:layout_below="@id/jours"
+
                 android:layout_marginTop="20dp"
                 android:text="Sexe:"
                 android:textColor="@color/blue"
@@ -176,9 +200,9 @@
                 android:id="@+id/radioGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/jours"
+
                 android:layout_marginTop="-40dp"
-                android:layout_toRightOf="@id/view_sex"
+
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -229,7 +253,7 @@
                 android:id="@+id/register_button_cancel"
                 android:layout_width="166dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/view_sex"
+
                 android:layout_marginTop="-50dp"
                 android:layout_marginRight="90dp"
                 android:backgroundTint="@color/blue"
