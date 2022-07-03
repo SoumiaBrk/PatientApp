@@ -71,12 +71,11 @@ class Register : AppCompatActivity() {
 
         reg.setOnClickListener { register() }
 
-        Ibtn.setOnClickListener(View.OnClickListener {
+        Ibtn.setOnClickListener {
             val R = Intent(this@Register, Login::class.java)
             startActivity(R)
             finish()
         }
-        )
         val datePicker = findViewById<DatePicker>(R.id.datePicker)
         val today = Calendar.getInstance()
         datePicker.init(
