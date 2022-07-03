@@ -165,7 +165,6 @@
                 android:id="@+id/Gender"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
-                android:layout_below="@id/jours"
                 android:layout_marginTop="20dp"
                 android:text="Sexe:"
                 android:textColor="@color/blue"
@@ -176,9 +175,7 @@
                 android:id="@+id/radioGender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/jours"
                 android:layout_marginTop="-40dp"
-                android:layout_toRightOf="@id/view_sex"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -229,7 +226,6 @@
                 android:id="@+id/register_button_cancel"
                 android:layout_width="166dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/view_sex"
                 android:layout_marginTop="-50dp"
                 android:layout_marginRight="90dp"
                 android:backgroundTint="@color/blue"

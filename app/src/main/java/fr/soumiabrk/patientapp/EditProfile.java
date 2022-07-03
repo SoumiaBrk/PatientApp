@@ -46,11 +46,6 @@ public class EditProfile extends AppCompatActivity {
         prenom= (EditText) findViewById(R.id.prenom);
         email= (EditText) findViewById(R.id.email);
 
-        jour= (Spinner) findViewById(R.id.jours);
-        mois= (Spinner) findViewById(R.id.mois);
-        annee= (Spinner) findViewById(R.id.annee);
-
-        sexe=(RadioGroup) findViewById(R.id.radioSex);
 
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
